@@ -2,6 +2,7 @@ import { Dashboard, HeartBroken } from '@mui/icons-material';
 import React from 'react';
 import { ProSidebar, Menu, MenuItem, SubMenu, SidebarContent, SidebarHeader, SidebarFooter } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
+import './Sideber.scss';
 
 const Sideber = () => {
     return (
