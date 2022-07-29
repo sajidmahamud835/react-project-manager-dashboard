@@ -1,4 +1,4 @@
-import { BusinessCenter, Dashboard, Payment, Person, VerifiedUser } from '@mui/icons-material';
+import { BusinessCenter, Dashboard, Logout, Payment, Person, SettingsApplications, VerifiedUser } from '@mui/icons-material';
 import React from 'react';
 import { ProSidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
@@ -8,17 +8,17 @@ const userProjects = [
     {
         name: 'Project 1',
         id: '1',
-        link: '/project/1'
+        link: '/projects/view/1'
     },
     {
         name: 'Project 2',
         id: '2',
-        link: '/project/2'
+        link: '/projects/view/2'
     },
     {
         name: 'Project 3',
         id: '3',
-        link: '/project/3'
+        link: '/projects/view/3'
     }
 ];
 
@@ -56,6 +56,17 @@ const Sideber = () => {
                     </MenuItem>
                     <MenuItem icon={<VerifiedUser />}>
                         <Link to="/kyc">KYC Verification</Link>
+                    </MenuItem>
+                    <SubMenu title="Settings" icon={<SettingsApplications />}>
+                        <MenuItem>
+                            <Link to="/settings/changePassword">Change Password</Link>
+                        </MenuItem>
+                        <MenuItem>
+                            <Link to="/settings/closeAccount">Close Account</Link>
+                        </MenuItem>
+                    </SubMenu>
+                    <MenuItem icon={<Logout />}>
+                        Logout
                     </MenuItem>
                 </Menu>
 
