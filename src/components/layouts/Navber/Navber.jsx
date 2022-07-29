@@ -18,9 +18,9 @@ const Navber = () => {
 
     const darkTheme = createTheme({
         palette: {
-            mode: 'light',
+            mode: 'dark',
             primary: {
-                main: '#fff',
+                main: '#1976d2',
             },
         },
     });
