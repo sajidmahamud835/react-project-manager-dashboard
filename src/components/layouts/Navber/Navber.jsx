@@ -1,11 +1,12 @@
 import { AccountCircle } from '@mui/icons-material';
-import { AppBar, createTheme, FormControlLabel, FormGroup, IconButton, Menu, MenuItem, Switch, ThemeProvider, Toolbar, Typography } from '@mui/material';
+import { AppBar, createTheme, IconButton, Menu, MenuItem, ThemeProvider, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Box } from '@mui/system';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { SettingsContext } from '../../../api/context/useContext';
 
 const Navber = () => {
-    const [auth, setAuth] = useState(false);
+    const settings = useContext(SettingsContext);
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleMenu = (event) => {
@@ -40,7 +41,7 @@ const Navber = () => {
                                 <MenuIcon />
                             </IconButton>
                             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                                Material-UI
+                                {settings.title}
                             </Typography>
                             <div>
                                 <IconButton
@@ -70,7 +71,7 @@ const Navber = () => {
                                     onClose={handleClose}
                                 >
                                     <MenuItem onClick={handleClose}>Profile</MenuItem>
-                                    <MenuItem onClick={handleClose}>My account</MenuItem>
+                                    <MenuItem onClick={handleClose}>Logout</MenuItem>
                                 </Menu>
                             </div>
                         </Toolbar>

@@ -5,14 +5,14 @@ import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
     return (
-        <app>
+        <div className='app'>
             <Sideber />
             <Routes>
                 <Route path="/" element={<Main />} >
-                    <Route path="about" element={<h1>This is about</h1>} />
+                    <Route path="dashboard" element={<h1>This is dashboard</h1>} />
                 </Route>
             </Routes>
-        </app>
+        </div>
     );
 };
 
