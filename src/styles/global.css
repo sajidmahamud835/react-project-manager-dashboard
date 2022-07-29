@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+app {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr;
+}
+
+aside nav {
+  height: 85vh;
+}
+
+main {
+  background-color: red;
+}
