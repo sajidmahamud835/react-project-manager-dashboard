@@ -1,6 +1,7 @@
 import { Grid } from '@mui/material';
 import React from 'react';
 import EarningssChart from '../EarningsChart/EarningsChart';
+import ProjectsChart from '../ProjectsChart/ProjectsChart';
 const data = [
     {
         name: "January",
@@ -71,7 +72,11 @@ const UserAnalytics = () => {
                     <EarningssChart data={data} />
                 </Grid>
                 <Grid item xs={6}>
-                    <EarningssChart data={data} />
+                    <ProjectsChart colors={["#0088FE", "#00C49F", "#FF8042", "#FFBB28"]} data={[
+                        { name: "Open", value: 5 },
+                        { name: "Completed", value: 4 },
+                        { name: "Cancelded", value: 1 }
+                    ]} />
                 </Grid>
             </Grid>
         </div>
