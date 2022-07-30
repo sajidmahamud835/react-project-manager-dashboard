@@ -21,3 +21,7 @@ code {
 aside {
   min-height: 85vh;
 }
+
+main {
+  margin-left: 20px;
+}
