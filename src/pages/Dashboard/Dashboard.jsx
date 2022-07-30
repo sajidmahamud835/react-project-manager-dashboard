@@ -1,6 +1,8 @@
 import React from 'react';
 import FeaturedCardGrid from '../../components/FeaturedCardGrid/FeaturedCardGrid';
 import { BusinessCenter } from '@mui/icons-material';
+import EarningsChart from '../../components/EarningsChart/EarningsChart';
+import UserAnalytics from '../../components/UserAnalytics/UserAnalytics';
 
 const Dashboard = () => {
     return (
@@ -28,6 +30,8 @@ const Dashboard = () => {
                 },
 
             ]} />
+
+            <UserAnalytics />
 
         </section>
     );
