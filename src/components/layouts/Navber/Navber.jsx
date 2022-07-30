@@ -1,5 +1,5 @@
 import { AccountCircle } from '@mui/icons-material';
-import { AppBar, createTheme, IconButton, Menu, MenuItem, ThemeProvider, Toolbar, Typography } from '@mui/material';
+import { AppBar, Avatar, createTheme, IconButton, Menu, MenuItem, ThemeProvider, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Box } from '@mui/system';
 import React, { useContext, useState } from 'react';
@@ -53,7 +53,7 @@ const Navber = () => {
                                     color="inherit"
                                     sx={{ flexGrow: 1 }}
                                 >
-                                    <AccountCircle />
+                                    <Avatar alt="Remy Sharp" src="https://material-ui.com/static/images/avatar/2.jpg" />
                                 </IconButton>
                                 <Menu
                                     id="menu-appbar"
