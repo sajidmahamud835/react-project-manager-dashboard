@@ -1,10 +1,10 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, Chip, Typography } from '@mui/material';
+import { Button, Card, CardContent, CardHeader, Chip, Typography, CardActions, Grid, Stack } from '@mui/material';
 
 const ProjectDetailsCard = (props) => {
     const { name, description, category, url } = props.data;
     return (
-        <Card sx={{ minHeight: 400 }}>
+        <Card>
             <CardHeader title={name} />
             <CardContent>
                 <Chip sx={{ marginTop: 0, marginBottom: 2 }} label={category.name} color={category.color} />
@@ -16,8 +16,13 @@ const ProjectDetailsCard = (props) => {
                         {url}
                     </a>
                 </Typography>
+                <Stack direction="row" justifyContent="end">
+                    <Button variant="contained" color="primary">
+                        Start Project
+                    </Button>
+                </Stack>
             </CardContent>
-        </Card>
+        </Card >
     );
 };
 
