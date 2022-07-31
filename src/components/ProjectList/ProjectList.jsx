@@ -1,12 +1,15 @@
 import { Card, CardContent, CardHeader, Divider, List, ListItemButton } from '@mui/material';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ProjectListItem from './ProjectListItem/ProjectListItem';
 
 const ProjectList = (props) => {
     const [selectedIndex, setSelectedIndex] = React.useState(1);
+    const navigate = useNavigate()
 
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
+        navigate(`/projects/view/${index}`)
     };
 
     return (
