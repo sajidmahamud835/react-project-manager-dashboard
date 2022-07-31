@@ -37,9 +37,21 @@ const ProjectListItem = (props) => {
                         />
                     </Grid>
                     <Grid item xs={2}>
-                        <Typography component="span" variant="h3" color="textDisabled">
-                            {budget}
-                        </Typography>
+                        <ListItemText
+                            primary={
+                                <React.Fragment>
+                                    <Typography component="span" variant="h3" color="textDisabled">
+                                        {budget}
+                                    </Typography>
+                                </React.Fragment>
+
+                            }
+                            secondary={
+                                <React.Fragment>
+                                    <Chip sx={{ marginTop: 3 }} label={status} />
+                                </React.Fragment>
+                            }
+                        />
                     </Grid>
                 </Grid>
             </ListItem>

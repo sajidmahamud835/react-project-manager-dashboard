@@ -24,7 +24,7 @@ const ProjectList = () => {
                 name: 'Web Development',
                 color: 'primary',
             },
-            status: 'In Progress',
+            status: 'Not Started',
             members: [
                 {
                     id: 1,
@@ -160,7 +160,7 @@ const ProjectList = () => {
                 name: 'Web Development',
                 color: 'primary',
             },
-            status: 'In Progress',
+            status: 'Completed',
             members: [
                 {
                     id: 1,
