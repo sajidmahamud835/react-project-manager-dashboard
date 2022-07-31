@@ -1,6 +1,8 @@
+import { Grid } from '@mui/material';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ProjectDetailsCard from '../../../components/ProjectDetailsCard/ProjectDetailsCard';
+import ProjectSummaryCard from '../../../components/ProjectSummaryCard/ProjectSummaryCard';
 import projects from '../../../DummyData';
 
 const ViewProject = () => {
@@ -10,7 +12,15 @@ const ViewProject = () => {
     return (
         <div>
             <h1>View Project</h1>
-            <ProjectDetailsCard data={project} />
+            <Grid container spacing={3}>
+                <Grid item xs={8}>
+                    <ProjectDetailsCard data={project} />
+                </Grid>
+                <Grid item xs={4}>
+                    <ProjectSummaryCard data={project} />
+                </Grid>
+
+            </Grid>
         </div>
     );
 
