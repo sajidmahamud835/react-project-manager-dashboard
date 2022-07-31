@@ -9,8 +9,8 @@ const ProjectListItem = (props) => {
                 <ListItemText
                     primary={
                         <React.Fragment>
-                            <Chip label={category.name} color={category.color} />
-                            <Typography sx={{ marginRight: 1 }} component="h3" variant="h6" color="textPrimary">
+                            <Chip sx={{ marginBottom: 1 }} label={category.name} color={category.color} />
+                            <Typography component="h3" variant="h6" color="textPrimary">
                                 {name}
                             </Typography>
                             <Typography component="span" variant="body2" color="textDisabled">
@@ -20,8 +20,12 @@ const ProjectListItem = (props) => {
                     }
                     secondary={
                         <React.Fragment>
+                            <br />
                             <Typography sx={{ marginRight: 1 }} component="span" variant="body2" color="textPrimary">
-                                {owner}
+                                <Chip
+                                    avatar={<Avatar alt={owner.name} src={owner.avatar} />}
+                                    label={owner.name}
+                                />
                             </Typography>
                             <Typography component="span" variant="body2" color="textDisabled">
                                 {createdAt}

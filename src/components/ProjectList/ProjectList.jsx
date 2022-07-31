@@ -1,4 +1,4 @@
-import { Divider, List, ListItemButton } from '@mui/material';
+import { Card, CardContent, CardHeader, Divider, List, ListItemButton } from '@mui/material';
 import React from 'react';
 import ProjectListItem from './ProjectListItem/ProjectListItem';
 
@@ -13,7 +13,10 @@ const ProjectList = () => {
             id: 1,
             name: 'Create me a website with React, Material-UI and Webpack, and deploy it to Firebase.',
             description: 'lorem ipsum dolor sit amet. consectetur adipiscing elit. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe.',
-            owner: 'John Doe',
+            owner: {
+                name: 'John Doe',
+                avatar: 'https://randomuser.me/api/portraits/men/1.jpg'
+            },
             createdAt: '2020-01-01',
             budget: '$100',
             category: {
@@ -44,7 +47,10 @@ const ProjectList = () => {
             id: 2,
             name: 'Create me a Mobile App with React Native and Firebase.',
             description: 'lorem ipsum dolor sit amet. consectetur adipiscing elit. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe.',
-            owner: 'John Doe',
+            owner: {
+                name: 'Jane Doe',
+                avatar: 'https://randomuser.me/api/portraits/men/2.jpg'
+            },
             createdAt: '2020-01-01',
             budget: '$100',
             category: {
@@ -75,7 +81,10 @@ const ProjectList = () => {
             id: 3,
             name: 'Create me a dashboard with React, Material-UI and Webpack.',
             description: 'lorem ipsum dolor sit amet. consectetur adipiscing elit. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe.',
-            owner: 'Jane Doe',
+            owner: {
+                name: 'Jack Doe',
+                avatar: 'https://randomuser.me/api/portraits/women/1.jpg'
+            },
             createdAt: '2020-01-01',
             budget: '$100',
             category: {
@@ -106,7 +115,10 @@ const ProjectList = () => {
             id: 4,
             name: 'Desing UI for the website.',
             description: 'lorem ipsum dolor sit amet. consectetur adipiscing elit. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe.',
-            owner: 'Jane Doe',
+            owner: {
+                name: 'John Doe',
+                avatar: 'https://randomuser.me/api/portraits/men/1.jpg'
+            },
             createdAt: '2020-01-01',
             budget: '$100',
             category: {
@@ -137,7 +149,10 @@ const ProjectList = () => {
             id: 5,
             name: 'Fix the bug in the website.',
             description: 'lorem ipsum dolor sit amet. consectetur adipiscing elit. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehe.',
-            owner: 'Jack Doe',
+            owner: {
+                name: 'Jane Doe',
+                avatar: ""
+            },
             createdAt: '2020-01-01',
             budget: '$100',
             category: {
@@ -168,21 +183,25 @@ const ProjectList = () => {
     ];
     return (
         <div>
-            <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-                {
-                    data.map((index) => (
-                        <article key={index.id}>
-                            <ListItemButton
-                                selected={selectedIndex === index.id}
-                                onClick={(event) => handleListItemClick(event, index.id)}
-                            >
-                                <ProjectListItem {...index} />
-                            </ListItemButton>
-                            {index !== 5 && <Divider component="li" />}
-                        </article>
-                    ))
-                }
-            </List>
+            <Card>
+                <CardContent>
+                    <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+                        {
+                            data.map((index) => (
+                                <article key={index.id}>
+                                    <ListItemButton
+                                        selected={selectedIndex === index.id}
+                                        onClick={(event) => handleListItemClick(event, index.id)}
+                                    >
+                                        <ProjectListItem {...index} />
+                                    </ListItemButton>
+                                    {index !== 5 && <Divider component="li" />}
+                                </article>
+                            ))
+                        }
+                    </List>
+                </CardContent>
+            </Card>
         </div>
     );
 };
