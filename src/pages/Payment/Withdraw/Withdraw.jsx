@@ -6,6 +6,7 @@ const Withdraw = () => {
         <div>
             <h1>Withdraw</h1>
             <WithdrawForm />
+
         </div>
     );
 };
